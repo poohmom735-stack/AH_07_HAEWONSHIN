@@ -1,87 +1,103 @@
 /**
  * 웹 브라우저 콘솔용 사칙연산 계산기
- * HTML 페이지의 start() 호출과 연동됩니다.
+ * - 연산자 우선순위 (*, / 우선 연산)
+ * - 긴 연산식 및 공백 분리 연산 처리
  */
 
-function calculate(expression) {
-    // 1. 공백 제거 및 토큰화
-    const tokens = expression.replace(/\s+/g, '').match(/\d+(\.\d+)?|[+\-*/()]/g);
-    
-    if (!tokens) {
-        throw new Error("올바른 계산식을 입력해주세요.");
-    }
-
-    // 연산자 우선순위 정의 (*, / : 2순위 | +, - : 1순위)
-    const precedence = {
-        '*': 2,
-        '/': 2,
-        '+': 1,
-        '-': 1
-    };
-
-    const values = [];    // 피연산자 스택
-    const operators = []; // 연산자 스택
-
-    function applyOp() {
-        const op = operators.pop();
-        const b = values.pop();
-        const a = values.pop();
-
-        switch (op) {
-            case '+': values.push(a + b); break;
-            case '-': values.push(a - b); break;
-            case '*': values.push(a * b); break;
-            case '/': 
-                if (b === 0) throw new Error("0으로 나눌 수 없습니다.");
-                values.push(a / b); 
-                break;
-        }
-    }
-
-    // 2. 토큰 순회 및 연산
-    for (let token of tokens) {
-        if (!isNaN(token)) {
-            values.push(parseFloat(token));
-        } else if (token === '(') {
-            operators.push(token);
-        } else if (token === ')') {
-            while (operators.length > 0 && operators[operators.length - 1] !== '(') {
-                applyOp();
-            }
-            operators.pop();
-        } else if (token in precedence) {
-            while (
-                operators.length > 0 &&
-                operators[operators.length - 1] !== '(' &&
-                precedence[operators[operators.length - 1]] >= precedence[token]
-            ) {
-                applyOp();
-            }
-            operators.push(token);
-        }
-    }
-
-    while (operators.length > 0) {
-        applyOp();
-    }
-
-    return values[0];
+function add(a, b) {
+    return a + b;
 }
 
-// 3. HTML 콘솔 안내문용 실행 함수 (start)
-function start() {
-    const input = prompt("계산할 식을 입력하세요 (예: 10 + 20 * 3 - 5):");
-    if (!input) return;
+function subtract(a, b) {
+    return a - b;
+}
 
-    try {
-        const result = calculate(input);
+function multiply(a, b) {
+    return a * b;
+}
+
+function divide(a, b) {
+    return a / b;
+}
+
+function inputFormula() {
+    return prompt("계산식을 입력하세요. (예: 1 + 1 * 4)");
+}
+
+function calculate(formula) {
+    const tokens = formula.trim().split(/\s+/);
+    if (tokens.length < 3 || tokens.length % 2 === 0) {
+        return "잘못된 계산식이 입력되었습니다.";
+    }
+
+    // 1단계: 곱셈과 나눗셈 먼저 처리 (우선순위 적용)
+    const intermediateTokens = [];
+    let i = 0;
+    while (i < tokens.length) {
+        const token = tokens[i];
+        if (token === "*" || token === "/") {
+            const left = Number(intermediateTokens.pop());
+            const operator = token;
+            const right = Number(tokens[i + 1]);
+
+            if (isNaN(left) || isNaN(right)) return "잘못된 숫자가 입력되었습니다.";
+
+            let res;
+            if (operator === "*") {
+                res = multiply(left, right);
+            } else {
+                if (right === 0) return "0으로 나눌 수 없습니다.";
+                res = divide(left, right);
+            }
+            intermediateTokens.push(res);
+            i += 2; // 연산자와 오른쪽 피연산자 건너뜀
+        } else {
+            intermediateTokens.push(token);
+            i++;
+        }
+    }
+
+    // 2단계: 덧셈과 뺄셈 처리
+    let result = Number(intermediateTokens[0]);
+    if (isNaN(result)) return "잘못된 숫자가 입력되었습니다.";
+
+    for (let j = 1; j < intermediateTokens.length; j += 2) {
+        const operator = intermediateTokens[j];
+        const nextValue = Number(intermediateTokens[j + 1]);
+
+        if (isNaN(nextValue)) return "잘못된 숫자가 입력되었습니다.";
+
+        if (operator === "+") {
+            result = add(result, nextValue);
+        } else if (operator === "-") {
+            result = subtract(result, nextValue);
+        } else {
+            return `예외 발생: ${operator}`;
+        }
+    }
+    return result;
+}
+
+function start(formula) {
+    let input = formula;
+    
+    // 인자가 없으면 prompt로 물어봄
+    if (!input) {
+        input = inputFormula();
+    }
+    
+    if (!input) {
+        console.log("계산식을 입력해주세요.");
+        return;
+    }
+
+    const result = calculate(input);
+    if (typeof result === "string") {
+        console.log(`에러 발생: ${result}`);
+    } else {
         console.log("====================================");
         console.log(`입력식: ${input}`);
         console.log(`계산 결과: ${result}`);
         console.log("====================================");
-        alert(`계산 결과: ${result}`);
-    } catch (error) {
-        console.error(`[오류] ${error.message}`);
-        alert(`오류: ${error.message}`);
     }
 }
