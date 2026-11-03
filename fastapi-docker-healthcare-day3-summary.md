@@ -1,4 +1,4 @@
-# FastAPI와 Docker 기반 헬스케어 웹서비스 배포 3일차 학습 정리
+# Docker 를 활용한 웹서비스 배포 3일차 학습 정리
 
 ## 1. Docker Compose 기반 다중 컨테이너 아키텍처 구축
 
