@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신혜원의 이력서</title>
+</head>
+<body>
+    <!-- 1. 제목 및 구분선 (<h1~3>, <hr>) -->
+    <h1>신혜원 이력서</h1>
+    <hr>
+
+    <!-- 2. 프로필 이미지 및 기본 정보 (<img>, <p>, <a>) -->
+    <section>
+        <h2>기본 정보</h2>
+        <!-- 업로드된 사진 소스 파일 적용 -->
+        <img src="honggildong_profile_(1).png" alt="신혜원 프로필 이미지" width="180">
+        
+        <p><strong>이름:</strong> 신혜원</p>
+        <p><strong>직무:</strong> 프론트엔드 개발자 (OZ코딩스쿨 수강생)</p>
+        <p><strong>GitHub:</strong> <a href="[suspicious link removed]" target="_blank">[suspicious link removed]</a></p>
+    </section>
+
+    <hr>
+
+    <!-- 3. 자기소개 및 기술/목표 목록 (<p>, <ul>, <ol>, <li>) -->
+    <section>
+        <h2>자기소개</h2>
+        <p>안녕하세요! OZ코딩스쿨에서 웹 개발을 배우며 사용자 친화적인 웹 서비스를 만들어가는 개발자 신혜원입니다. 탄탄한 HTML/CSS 기본기를 바탕으로 성실하게 성장하고 있습니다.</p>
+
+        <h3>보유 주요 기술 (순서 없는 목록 - ul)</h3>
+        <ul>
+            <li>HTML5 / CSS3 웹 표준 작성</li>
+            <li>Git & GitHub 버전 관리 및 협업</li>
+            <li>JavaScript 기초 및 DOM 조작</li>
+        </ul>
+
+        <h3>이번 챌린지 학습 목표 (순서 있는 목록 - ol)</h3>
+        <ol>
+            <li>HTML/CSS 2일차 챌린지 성공적으로 완료하기</li>
+            <li>시맨틱 태그 및 웹 접근성을 고려한 코드 작성하기</li>
+            <li>나만의 이력서 포트폴리오 웹페이지 완성하기</li>
+        </ol>
+    </section>
+
+    <hr>
+
+    <!-- 4. 이력 테이블 (<table>, <thead>, <tbody>, <tr>, <th>, <td>) -->
+    <section>
+        <h2>주요 이력</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>기간</th>
+                    <th>교육 및 활동 내용</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2026.11 ~ 현재</td>
+                    <td>OZ코딩스쿨 LMS 웹 개발 과정 수강</td>
+                    <td>챌린지 52 진행 중</td>
+                </tr>
+                <tr>
+                    <td>2026.10</td>
+                    <td>HTML/CSS 기초 마스터 과정 완료</td>
+                    <td>기초 역량 습득</td>
+                </tr>
+                <tr>
+                    <td>2026.09</td>
+                    <td>Git & GitHub 실습 프로젝트 진행</td>
+                    <td>레포지토리 관리 연습</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+
+    <!-- 5. 자기소개서 하단 메일 발송 폼 (<form>, <input>, <button>) -->
+    <section>
+        <h2>메일 발송</h2>
+        <form action="#" method="post">
+            <p>
+                <label for="sender-name">보내는 사람 이름:</label><br>
+                <input type="text" id="sender-name" name="senderName" placeholder="이름을 입력하세요" required>
+            </p>
+            <p>
+                <label for="sender-email">보내는 사람 이메일:</label><br>
+                <input type="email" id="sender-email" name="senderEmail" placeholder="example@email.com" required>
+            </p>
+            <p>
+                <label for="email-message">문의 내용:</label><br>
+                <input type="text" id="email-message" name="message" placeholder="메시지를 입력하세요" required>
+            </p>
+            <button type="submit">메일 발송</button>
+        </form>
+    </section>
+</body>
+</html>
