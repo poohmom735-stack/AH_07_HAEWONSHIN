@@ -4,242 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>신혜원의 이력서</title>
+
     <link rel="stylesheet" href="resume_style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
 </head>
 <body>
 
-    <!-- 모바일 햄버거 버튼 -->
-    <button class="menu-toggle" aria-label="메뉴 열기">
-        <i class="fa-solid fa-bars"></i>
-    </button>
-
-    <!-- 사이드바 navbar -->
-    <nav class="sidebar">
-        <div class="sidebar-container">
-            <ul class="sidebar-menu">
-                <li><a href="#resume"><i class="fa-solid fa-file-lines"></i> 이력서</a></li>
-                <li><a href="#skills"><i class="fa-solid fa-code"></i> Skills</a></li>
-                <li><a href="#experience"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
-                <li><a href="#mail-form"><i class="fa-solid fa-envelope"></i> 메일 발송</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- 사이드바 오버레이 -->
-    <div class="sidebar-overlay"></div>
-
-    <!-- 메인 컨텐츠 -->
-    <div id="resume" class="container">
-
-        <!-- 프로필 및 기본 정보 -->
-        <section id="resume-header">
-            <div class="header-content">
-                <div class="header-text">
-                    <h1>신혜원 (Shin Hye-won)</h1>
-                    <p class="job-title">데이터 분석가 · 서비스 기획자 · 심사 전문가</p>
-                    <div class="contact-info">
-                        <span><i class="fa-solid fa-envelope"></i> dongdong735@daum.net</span>
-                        <span><i class="fa-solid fa-mobile-screen"></i> 010-7154-3173</span>
-                        <span><i class="fa-solid fa-location-dot"></i> 서울 강남구 개포로 409 현대3차아파트</span>
-                        <span>
-                            <i class="fa-brands fa-github"></i>
-                            <a href="https://github.com/poohmom735-stack" target="_blank">GitHub 레포지토리</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="profile-photo">
-                    <img src="./profile.png" alt="신혜원 프로필 사진" class="profile-img">
-                </div>
-            </div>
-        </section>
-
-        <!-- Introduce -->
-        <section id="introduce">
-            <h2>Introduce</h2>
-            <p>파이썬, 통계, 데이터베이스, 머신러닝·딥러닝, 의료 데이터 분석 및 디지털 의료 웹 서비스 개발을 다루는 AI 헬스케어 초격차 캠프를 수강했습니다. 의료 소비자와 환자 입장에서 최적인 서비스 개발과 개선을 위한 기획과 보완을 위한 조사자이자 분석가입니다.</p>
-        </section>
-
-        <!-- Skills -->
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills-group">
-                <h3>AI & Tech</h3>
-                <div class="skills-container">
-                    <span class="skill-tag">AI Agent</span>
-                    <span class="skill-tag">바이브코딩</span>
-                    <span class="skill-tag">Gemini</span>
-                    <span class="skill-tag">Python</span>
-                </div>
-            </div>
-            <div class="skills-group">
-                <h3>Data</h3>
-                <div class="skills-container">
-                    <span class="skill-tag">데이터분석</span>
-                    <span class="skill-tag">분석</span>
-                    <span class="skill-tag">리서치</span>
-                    <span class="skill-tag">연구</span>
-                </div>
-            </div>
-            <div class="skills-group">
-                <h3>Planning</h3>
-                <div class="skills-container">
-                    <span class="skill-tag">서비스 기획</span>
-                    <span class="skill-tag">논리적 사고</span>
-                    <span class="skill-tag">질문 능력</span>
-                </div>
-            </div>
-            <div class="skills-group">
-                <h3>Soft Skills</h3>
-                <div class="skills-container">
-                    <span class="skill-tag">문서 의사소통</span>
-                    <span class="skill-tag">글쓰기</span>
-                    <span class="skill-tag">창의성</span>
-                    <span class="skill-tag">고객지향성</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience -->
-        <section id="experience">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <div class="experience-info">
-                    <span class="company">AI 헬스케어 초격차 캠프 (오즈코딩스쿨)</span>
-                    <span class="period">2026</span>
-                </div>
-                <div class="role">
-                    <span class="position">수강생</span>
-                </div>
-                <ul class="details">
-                    <li>의료 데이터를 활용한 웹 서비스 개발 교육</li>
-                    <li>파이썬, 통계, 데이터베이스 활용부터 머신러닝·딥러닝 학습</li>
-                    <li>난임 예측 및 X-ray 폐렴 분류 등 의료 데이터 분석</li>
-                    <li>팀 프로젝트 수회를 통한 실습 및 협업 능력 배양</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Education -->
-        <section id="education">
-            <h2>Education</h2>
-            <table class="education-table">
-                <thead>
-                    <tr>
-                        <th>기간</th>
-                        <th>학교</th>
-                        <th>전공</th>
-                        <th>상태</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2026.03 ~ 현재</td>
-                        <td>서울사이버대학교</td>
-                        <td>AI서비스마케팅학과</td>
-                        <td>2026.09 ~ 휴학</td>
-                    </tr>
-                    <tr>
-                        <td>2025.03 ~ 현재</td>
-                        <td>고려사이버대학교</td>
-                        <td>보건의료학과</td>
-                        <td>2026.09 ~ 휴학</td>
-                    </tr>
-                    <tr>
-                        <td>1997.02 ~ 2004.08</td>
-                        <td>서울대학교 대학원</td>
-                        <td>영문학전공</td>
-                        <td>수료</td>
-                    </tr>
-                    <tr>
-                        <td>1992.02 ~ 1996.08</td>
-                        <td>서울대학교(관악)</td>
-                        <td>영어영문학과</td>
-                        <td>졸업</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Certifications -->
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <table class="education-table">
-                <thead>
-                    <tr>
-                        <th>취득일</th>
-                        <th>자격증명</th>
-                        <th>발행처</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2026.07</td>
-                        <td>전문보험심사청구사</td>
-                        <td>한국보험청구심사협회</td>
-                    </tr>
-                    <tr>
-                        <td>2026.06</td>
-                        <td>보험심사평가사 2급</td>
-                        <td>한국의료행정실무협의회</td>
-                    </tr>
-                    <tr>
-                        <td>2026.05</td>
-                        <td>건강보험심사청구사 1급</td>
-                        <td>한국자격검정평가진흥원</td>
-                    </tr>
-                    <tr>
-                        <td>2026.05</td>
-                        <td>파이썬전문가 1급</td>
-                        <td>한국자격검정평가진흥원</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- 자기소개서 메일 발송 폼 -->
-        <section id="mail-form">
-            <h2>자기소개서 메일 발송 폼</h2>
-            <div class="mail-form">
-                <form action="#" method="POST">
-                    <div>
-                        <label for="sender-email">보내는 사람 이메일:</label>
-                        <input type="email" id="sender-email" name="sender-email" placeholder="이메일을 입력하세요" required>
-                    </div>
-                    <div>
-                        <label for="mail-subject">메일 제목:</label>
-                        <input type="text" id="mail-subject" name="mail-subject" placeholder="제목을 입력하세요" required>
-                    </div>
-                    <div>
-                        <label for="mail-content">메일 내용:</label>
-                        <textarea id="mail-content" name="mail-content" placeholder="하고 싶은 말을 적어주세요" required></textarea>
-                    </div>
-                    <button type="submit">메일 발송하기</button>
-                </form>
-            </div>
-        </section>
-
+    <!-- 프로필 및 기본 정보 -->
+    <h1>신혜원 (Shin Hye-won)</h1>
+    <img src="./profile.png" alt="신혜원 프로필 사진" class="profile-img">
+    <p><strong>데이터 분석가 · 서비스 기획자 · 심사 전문가</strong></p>
+    <div class="contact-info">
+        <p>이메일: dongdong735@daum.net | 연락처: 010-7154-3173</p>
+        <p>주소: 서울 강남구 개포로 409 현대3차아파트</p>
+        <p><a href="https://github.com/poohmom735-stack" target="_blank">GitHub 레포지토리 방문하기</a></p>
     </div>
 
-    <!-- 사이드바 토글 스크립트 -->
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const sidebar = document.querySelector('.sidebar');
-        const overlay = document.querySelector('.sidebar-overlay');
+    <!-- Introduce -->
+    <h2>Introduce</h2>
+    <p>파이썬, 통계, 데이터베이스, 머신러닝·딥러닝, 의료 데이터 분석 및 디지털 의료 웹 서비스 개발을 다루는 AI 헬스케어 초격차 캠프를 수강했습니다. 의료 소비자와 환자 입장에서 최적인 서비스 개발과 개선을 위한 기획과 보완을 위한 조사자이자 분석가입니다.</p>
 
-        function toggleSidebar() {
-            sidebar.classList.toggle('active');
-            overlay.classList.toggle('active');
-        }
+    <!-- Skills -->
+    <h2>Skills</h2>
+    <ul>
+        <li>AI Agent, 바이브코딩, Gemini</li>
+        <li>데이터분석, 분석, 리서치, 연구</li>
+        <li>서비스 기획, 논리적 사고, 질문 능력</li>
+        <li>문서 의사소통, 글쓰기, 창의성, 고객지향성</li>
+    </ul>
 
-        menuToggle.addEventListener('click', toggleSidebar);
-        overlay.addEventListener('click', toggleSidebar);
+    <!-- Experience -->
+    <h2>Experience</h2>
+    <h3>1. AI 헬스케어 초격차 캠프 (오즈코딩스쿨) - 수강생 (2026)</h3>
+    <ul>
+        <li>의료 데이터를 활용한 웹 서비스 개발 교육</li>
+        <li>파이썬, 통계, 데이터베이스 활용부터 머신러닝·딥러닝 학습</li>
+        <li>난임 예측 및 X-ray 폐렴 분류 등 의료 데이터 분석</li>
+        <li>팀 프로젝트 수회를 통한 실습 및 협업 능력 배양</li>
+    </ul>
 
-        document.querySelectorAll('.sidebar-menu li a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 1024) toggleSidebar();
-            });
-        });
-    </script>
+    <!-- Education -->
+    <h2>Education</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>기간</th>
+                <th>학교</th>
+                <th>전공</th>
+                <th>상태</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2026.03 ~ 현재</td>
+                <td>서울사이버대학교</td>
+                <td>AI서비스마케팅학과</td>
+                <td>2026.09 ~ 휴학</td> <!-- 수정 완료 -->
+            </tr>
+            <tr>
+                <td>2025.03 ~ 현재</td>
+                <td>고려사이버대학교</td>
+                <td>보건의료학과</td>
+                <td>2026.09 ~ 휴학</td> <!-- 수정 완료 -->
+            </tr>
+            <tr>
+                <td>1997.02 ~ 2004.08</td>
+                <td>서울대학교 대학원</td>
+                <td>영문학전공</td>
+                <td>수료</td>
+            </tr>
+            <tr>
+                <td>1992.02 ~ 1996.08</td>
+                <td>서울대학교(관악)</td>
+                <td>영어영문학과</td>
+                <td>졸업</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Certifications -->
+    <h2>Certifications</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>취득일</th>
+                <th>자격증명</th>
+                <th>발행처</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2026.07</td>
+                <td>전문보험심사청구사</td>
+                <td>한국보험청구심사협회</td>
+            </tr>
+            <tr>
+                <td>2026.06</td>
+                <td>보험심사평가사 2급</td>
+                <td>한국의료행정실무협의회</td>
+            </tr>
+            <tr>
+                <td>2026.05</td>
+                <td>건강보험심사청구사 1급</td>
+                <td>한국자격검정평가진흥원</td>
+            </tr>
+            <tr>
+                <td>2026.05</td>
+                <td>파이썬전문가 1급</td>
+                <td>한국자격검정평가진흥원</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 자기소개서 메일 발송 폼 -->
+    <h2>자기소개서 메일 발송 폼</h2>
+    <div class="mail-form">
+        <form action="#" method="POST">
+            <div>
+                <label for="sender-email">보내는 사람 이메일:</label>
+                <input type="email" id="sender-email" name="sender-email" placeholder="이메일을 입력하세요" required>
+            </div>
+            <div>
+                <label for="mail-subject">메일 제목:</label>
+                <input type="text" id="mail-subject" name="mail-subject" placeholder="제목을 입력하세요" required>
+            </div>
+            <div>
+                <label for="mail-content">메일 내용:</label>
+                <textarea id="mail-content" name="mail-content" placeholder="하고 싶은 말을 적어주세요" required></textarea>
+            </div>
+            <button type="submit">메일 발송하기</button>
+        </form>
+    </div>
+
 </body>
 </html>
