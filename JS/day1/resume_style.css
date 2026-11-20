@@ -1309,3 +1309,5 @@ a {
 }
 
 .profile-img, .profile-photo img, .avatar img { object-fit: cover !important; object-position: center top !important; transform: scale(1.08) translateY(8px) !important; }
+
+img[src*="profile"] { object-fit: cover !important; object-position: center top !important; transform: scale(1.12) translateY(10px) !important; }
