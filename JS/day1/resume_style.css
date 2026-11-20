@@ -1307,3 +1307,5 @@ a {
         gap: 8px;
     }
 }
+
+.profile-img, .profile-photo img, .avatar img { object-fit: cover !important; object-position: center top !important; transform: scale(1.08) translateY(8px) !important; }
