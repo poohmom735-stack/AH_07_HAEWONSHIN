@@ -3,260 +3,620 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>신혜원의 이력서</title>
+    <title>신혜원 | AI 헬스케어 데이터 분석가 & 서비스 기획자 포트폴리오</title>
     
-    <!-- Bootstrap 5 CSS 추가 -->
+    <!-- Google Fonts & Pretendard -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- 내 커스텀 CSS -->
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- 커스텀 CSS -->
     <link rel="stylesheet" href="resume_style.css">
 </head>
 <body>
 
-    <!-- 모바일 햄버거 버튼 -->
+    <!-- 모바일 메뉴 토글 버튼 -->
     <button class="menu-toggle" aria-label="메뉴 열기">
         <i class="fa-solid fa-bars"></i>
     </button>
 
-    <!-- 사이드바 navbar -->
-    <nav class="sidebar">
-        <div class="sidebar-container">
-            <ul class="sidebar-menu">
-                <li><a href="#resume"><i class="fa-solid fa-file-lines"></i> 이력서</a></li>
-                <li><a href="#skills"><i class="fa-solid fa-code"></i> Skills</a></li>
-                <li><a href="#experience"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
-                <li><a href="#mail-form"><i class="fa-solid fa-envelope"></i> 메일 발송</a></li>
-            </ul>
+    <!-- 사이드바 네비게이션 -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <span class="brand-icon"><i class="fa-solid fa-heart-pulse"></i></span>
+                <div class="brand-text">
+                    <span class="brand-name">PORTFOLIO</span>
+                    <span class="brand-sub">AI Healthcare</span>
+                </div>
+            </div>
         </div>
-    </nav>
+
+        <nav class="sidebar-container">
+            <ul class="sidebar-menu">
+                <li><a href="#resume-header" class="active"><i class="fa-solid fa-user"></i> <span>프로필 요약</span></a></li>
+                <li><a href="#introduce"><i class="fa-solid fa-bullseye"></i> <span>소개 (Vision)</span></a></li>
+                <li><a href="#skills"><i class="fa-solid fa-microchip"></i> <span>보유 역량</span></a></li>
+                <li><a href="#experience"><i class="fa-solid fa-chart-line"></i> <span>프로젝트 & 경험</span></a></li>
+                <li><a href="#certifications"><i class="fa-solid fa-award"></i> <span>전문 자격증</span></a></li>
+                <li><a href="#education"><i class="fa-solid fa-graduation-cap"></i> <span>학력 사항</span></a></li>
+                <li><a href="#mail-form"><i class="fa-solid fa-paper-plane"></i> <span>연락하기</span></a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>© 2026 Shin Hye-won</p>
+        </div>
+    </aside>
 
     <!-- 사이드바 오버레이 -->
     <div class="sidebar-overlay"></div>
 
-    <!-- 메인 컨텐츠 (Bootstrap container 적용) -->
-    <div id="resume" class="container my-5">
-        
-        <!-- 부트스트랩 Card 형태로 감싸서 종이 느낌 구현 -->
-        <div class="card shadow-lg border-0 p-4 p-md-5">
+    <!-- 메인 컨텐츠 영역 (모던 카드형 그리드 레이아웃) -->
+    <main class="main-content">
+        <div class="content-wrapper">
 
-            <!-- 프로필 및 기본 정보 -->
-            <section id="resume-header">
-                <div class="header-content">
-                    <div class="header-text">
-                        <h1>신혜원 (Shin Hye-won)</h1>
-                        <p class="job-title">데이터 분석가 · 서비스 기획자 · 심사 전문가</p>
-                        <div class="contact-info">
-                            <span><i class="fa-solid fa-envelope"></i> dongdong735@daum.net</span>
-                            <span><i class="fa-solid fa-mobile-screen"></i> 010-7154-3173</span>
-                            <span><i class="fa-solid fa-location-dot"></i> 서울 강남구 개포로 409 현대3차아파트</span>
-                            <span>
-                                <i class="fa-brands fa-github"></i>
-                                <a href="https://github.com/poohmom735-stack" target="_blank">GitHub 레포지토리</a>
+            <!-- 1. Hero Profile Card -->
+            <section id="resume-header" class="dashboard-card hero-card">
+                <div class="hero-cover-deco"></div>
+                <div class="hero-inner">
+                    <!-- 감각적인 원형 프로필 프레임 -->
+                    <div class="profile-frame-container">
+                        <div class="profile-photo-wrapper">
+                            <div class="profile-circle">
+                                <!-- 기본 아바타 (본인 사진으로 교체 가능) -->
+                                <img src="profile.png" 
+                                     alt="신혜원 프로필 사진" 
+                                     class="profile-img">
+                            </div>
+                            <span class="profile-badge" title="AI Healthcare Ready">
+                                <i class="fa-solid fa-dna"></i>
                             </span>
                         </div>
+                        <div class="status-indicator">
+                            <span class="pulse-dot"></span>
+                            <span class="status-text">Open to Healthcare Projects</span>
+                        </div>
                     </div>
-                    <div class="profile-photo">
-                        <!-- 프로필 사진이 없을 경우를 대비해 임시 이미지 링크로 대체 (본인 사진 경로로 변경하세요) -->
-                        <img src="https://via.placeholder.com/130" alt="신혜원 프로필 사진" class="profile-img">
+
+                    <!-- 프로필 텍스트 및 기본 정보 -->
+                    <div class="hero-details">
+                        <div class="role-badge-row">
+                            <span class="domain-badge"><i class="fa-solid fa-sparkles"></i> AI Healthcare</span>
+                            <span class="domain-badge highlight"><i class="fa-solid fa-brain"></i> Data Analyst & Planner</span>
+                        </div>
+                        <h1 class="hero-name">신혜원 <span class="name-en">Shin Hye-won</span></h1>
+                        <p class="hero-title">
+                            데이터로 헬스케어의 미래를 진단하고, 환자 중심의 의료 서비스를 기획하는 분석가
+                        </p>
+
+                        <!-- 연락처 카드 칩 그리드 -->
+                        <div class="contact-grid">
+                            <a href="mailto:dongdong735@daum.net" class="contact-chip" title="이메일 보내기">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>dongdong735@daum.net</span>
+                            </a>
+                            <a href="tel:010-7154-3173" class="contact-chip" title="전화 걸기">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>010-7154-3173</span>
+                            </a>
+                            <div class="contact-chip address" title="주소지">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>서울 강남구 개포로</span>
+                            </div>
+                            <a href="https://github.com/poohmom735-stack" target="_blank" rel="noopener noreferrer" class="contact-chip github" title="깃허브 방문">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub Repository</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square chip-ext"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 핵심 역량 하이라이트 지표 카드 -->
+                <div class="hero-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-icon"><i class="fa-solid fa-notes-medical"></i></div>
+                        <div class="highlight-info">
+                            <span class="highlight-num">4+</span>
+                            <span class="highlight-label">전문 자격증 (의료심사/파이썬)</span>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <div class="highlight-info">
+                            <span class="highlight-num">End-to-End</span>
+                            <span class="highlight-label">의료 데이터 파이프라인 & AI 기획</span>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon"><i class="fa-solid fa-crosshairs"></i></div>
+                        <div class="highlight-info">
+                            <span class="highlight-num">Patient-First</span>
+                            <span class="highlight-label">환자·소비자 중심 서비스 모델링</span>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Introduce -->
-            <section id="introduce" class="mt-4">
-                <h2>Introduce</h2>
-                <p>파이썬, 통계, 데이터베이스, 머신러닝·딥러닝, 의료 데이터 분석 및 디지털 의료 웹 서비스 개발을 다루는 AI 헬스케어 초격차 캠프를 수강했습니다. 의료 소비자와 환자 입장에서 최적인 서비스 개발과 개선을 위한 기획과 보완을 위한 조사자이자 분석가입니다.</p>
-            </section>
+            <!-- 2. Introduce / Vision Card -->
+            <section id="introduce" class="dashboard-card section-card">
+                <div class="card-header-custom">
+                    <div class="header-title-box">
+                        <span class="header-icon"><i class="fa-solid fa-user-astronaut"></i></span>
+                        <div>
+                            <h2>About Me & Vision</h2>
+                            <p class="section-sub">도메인 전문성과 데이터 사이언스의 융합</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body-custom">
+                    <div class="vision-quote-box">
+                        <i class="fa-solid fa-quote-left quote-mark"></i>
+                        <p class="lead-statement">
+                            파이썬, 통계, 데이터베이스, 머신러닝·딥러닝, 의료 데이터 분석 및 디지털 의료 웹 서비스 개발을 다루는 
+                            <strong>AI 헬스케어 초격차 캠프</strong>를 이수하며 탄탄한 데이터 사이언스 기반을 구축했습니다.
+                        </p>
+                        <p class="sub-statement">
+                            의료 소비자와 환자 관점에서 최적의 의료 서비스 개발과 개선을 견인하며, 복잡한 보건의료 데이터를 가치 있는 서비스 가설과 실행 전략으로 연결하는 <strong>데이터 분석가이자 서비스 기획자</strong>입니다.
+                        </p>
+                    </div>
 
-            <!-- Skills (Bootstrap Grid 적용) -->
-            <section id="skills" class="mt-4">
-                <h2>Skills</h2>
-                <div class="row">
-                    <div class="col-md-6 skills-group">
-                        <h3>AI & Tech</h3>
-                        <div class="skills-container">
-                            <span class="skill-tag">AI Agent</span>
-                            <span class="skill-tag">바이브코딩</span>
-                            <span class="skill-tag">Gemini</span>
-                            <span class="skill-tag">Python</span>
+                    <div class="competency-pills">
+                        <div class="pill-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>보건의료 도메인 이해 기반 데이터 탐색</span>
                         </div>
-                    </div>
-                    <div class="col-md-6 skills-group">
-                        <h3>Data</h3>
-                        <div class="skills-container">
-                            <span class="skill-tag">데이터분석</span>
-                            <span class="skill-tag">분석</span>
-                            <span class="skill-tag">리서치</span>
-                            <span class="skill-tag">연구</span>
+                        <div class="pill-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>임상/심사 청구 데이터 분석 및 프로세스 최적화</span>
                         </div>
-                    </div>
-                    <div class="col-md-6 skills-group">
-                        <h3>Planning</h3>
-                        <div class="skills-container">
-                            <span class="skill-tag">서비스 기획</span>
-                            <span class="skill-tag">논리적 사고</span>
-                            <span class="skill-tag">질문 능력</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6 skills-group">
-                        <h3>Soft Skills</h3>
-                        <div class="skills-container">
-                            <span class="skill-tag">문서 의사소통</span>
-                            <span class="skill-tag">글쓰기</span>
-                            <span class="skill-tag">창의성</span>
-                            <span class="skill-tag">고객지향성</span>
+                        <div class="pill-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>생성형 AI(Gemini, AI Agent) 및 바이브코딩 활용 생산성 극대화</span>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Experience -->
-            <section id="experience" class="mt-4">
-                <h2>Experience</h2>
-                <div class="experience-item">
-                    <div class="experience-info">
-                        <span class="company">AI 헬스케어 초격차 캠프 (오즈코딩스쿨)</span>
-                        <span class="period">2026</span>
+            <!-- 3. Skills Cards Grid -->
+            <section id="skills" class="dashboard-card section-card">
+                <div class="card-header-custom">
+                    <div class="header-title-box">
+                        <span class="header-icon"><i class="fa-solid fa-cubes-stacked"></i></span>
+                        <div>
+                            <h2>Skills & Capabilities</h2>
+                            <p class="section-sub">AI 헬스케어 및 데이터 기반 기획에 최적화된 테크니컬 스택</p>
+                        </div>
                     </div>
-                    <div class="role">
-                        <span class="position">수강생</span>
+                </div>
+
+                <div class="card-body-custom">
+                    <div class="row g-4 skills-grid">
+                        
+                        <!-- AI & Tech -->
+                        <div class="col-lg-6">
+                            <div class="skill-category-card ai-theme">
+                                <div class="cat-header">
+                                    <div class="cat-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                                    <div class="cat-title-wrap">
+                                        <h3>AI & Tech</h3>
+                                        <span>인공지능 및 최신 개발 툴킷</span>
+                                    </div>
+                                </div>
+                                <div class="skills-tags">
+                                    <div class="skill-badge featured">
+                                        <i class="fa-solid fa-robot"></i>
+                                        <span>AI Agent</span>
+                                    </div>
+                                    <div class="skill-badge featured">
+                                        <i class="fa-solid fa-bolt"></i>
+                                        <span>바이브코딩</span>
+                                    </div>
+                                    <div class="skill-badge">
+                                        <i class="fa-brands fa-google"></i>
+                                        <span>Gemini</span>
+                                    </div>
+                                    <div class="skill-badge">
+                                        <i class="fa-brands fa-python"></i>
+                                        <span>Python</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Data Analytics -->
+                        <div class="col-lg-6">
+                            <div class="skill-category-card data-theme">
+                                <div class="cat-header">
+                                    <div class="cat-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                                    <div class="cat-title-wrap">
+                                        <h3>Data Analytics</h3>
+                                        <span>의료·헬스케어 정량/정성 분석</span>
+                                    </div>
+                                </div>
+                                <div class="skills-tags">
+                                    <div class="skill-badge featured">
+                                        <i class="fa-solid fa-chart-simple"></i>
+                                        <span>데이터분석</span>
+                                    </div>
+                                    <div class="skill-badge">
+                                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                                        <span>심층 분석</span>
+                                    </div>
+                                    <div class="skill-badge">
+                                        <i class="fa-solid fa-book-medical"></i>
+                                        <span>도메인 리서치</span>
+                                    </div>
+                                    <div class="skill-badge">
+                                        <i class="fa-solid fa-flask-vial"></i>
+                                        <span>학술 연구</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Planning -->
+                        <div class="col-lg-6">
+                            <div class="skill-category-card plan-theme">
+                                <div class="cat-header">
+                                    <div class="cat-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                                    <div class="cat-title-wrap">
+                                        <h3>Service Planning</h3>
+                                        <span>문제 정의 및 프로덕트 기획</span>
+                                    </div>
+                                </div>
+                                <div class="skills-tags">
+                                    <div class="skill-badge featured">
+                                        <i class="fa-solid fa-lightbulb"></i>
+                                        <span>서비스 기획</span>
+                                    </div>
+                                    <div class="skill-badge">
+                                        <i class="fa-solid fa-sitemap"></i>
+                                        <span>논리적 사고</span>
+                                    </div>
+                                    <div class="skill-badge">
+                                        <i class="fa-solid fa-clipboard-question"></i>
+                                        <span>핵심 질문 도출</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Soft Skills -->
+                        <div class="col-lg-6">
+                            <div class="skill-category-card soft-theme">
+                                <div class="cat-header">
+                                    <div class="cat-icon"><i class="fa-solid fa-users"></i></div>
+                                    <div class="cat-title-wrap">
+                                        <h3>Professional Strengths</h3>
+                                        <span>커뮤니케이션 및 비즈니스 역량</span>
+                                    </div>
+                                </div>
+                                <div class="skills-tags">
+                                    <div class="skill-badge">
+                                        <i class="fa-solid fa-file-signature"></i>
+                                        <span>문서 의사소통</span>
+                                    </div>
+                                    <div class="skill-badge">
+                                        <i class="fa-solid fa-pen-nib"></i>
+                                        <span>글쓰기 & 리포팅</span>
+                                    </div>
+                                    <div class="skill-badge">
+                                        <i class="fa-solid fa-gem"></i>
+                                        <span>창의적 문제해결</span>
+                                    </div>
+                                    <div class="skill-badge featured">
+                                        <i class="fa-solid fa-heart"></i>
+                                        <span>환자/고객 지향성</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                    <ul class="details">
-                        <li>의료 데이터를 활용한 웹 서비스 개발 교육</li>
-                        <li>파이썬, 통계, 데이터베이스 활용부터 머신러닝·딥러닝 학습</li>
-                        <li>난임 예측 및 X-ray 폐렴 분류 등 의료 데이터 분석</li>
-                        <li>팀 프로젝트 수회를 통한 실습 및 협업 능력 배양</li>
-                    </ul>
                 </div>
             </section>
 
-            <!-- Education -->
-            <section id="education" class="mt-4">
-                <h2>Education</h2>
-                <div class="table-responsive">
-                    <table class="table table-bordered table-hover align-middle mb-0">
-                        <thead class="table-primary">
-                            <tr>
-                                <th>기간</th>
-                                <th>학교</th>
-                                <th>전공</th>
-                                <th>상태</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>2026.03 ~ 현재</td>
-                                <td>서울사이버대학교</td>
-                                <td>AI서비스마케팅학과</td>
-                                <td>2026.09 ~ 휴학</td>
-                            </tr>
-                            <tr>
-                                <td>2025.03 ~ 현재</td>
-                                <td>고려사이버대학교</td>
-                                <td>보건의료학과</td>
-                                <td>2026.09 ~ 휴학</td>
-                            </tr>
-                            <tr>
-                                <td>1997.02 ~ 2004.08</td>
-                                <td>서울대학교 대학원</td>
-                                <td>영문학전공</td>
-                                <td>수료</td>
-                            </tr>
-                            <tr>
-                                <td>1992.02 ~ 1996.08</td>
-                                <td>서울대학교(관악)</td>
-                                <td>영어영문학과</td>
-                                <td>졸업</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <!-- 4. Experience & Projects Card -->
+            <section id="experience" class="dashboard-card section-card">
+                <div class="card-header-custom">
+                    <div class="header-title-box">
+                        <span class="header-icon"><i class="fa-solid fa-briefcase"></i></span>
+                        <div>
+                            <h2>Experience & Projects</h2>
+                            <p class="section-sub">실무 기반 의료 데이터 분석 및 서비스 개발 이력</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body-custom">
+                    <div class="timeline-container">
+                        <!-- Project 1 Item -->
+                        <div class="timeline-item">
+                            <div class="timeline-badge-icon">
+                                <i class="fa-solid fa-hospital-user"></i>
+                            </div>
+                            <div class="timeline-card">
+                                <div class="timeline-head">
+                                    <div>
+                                        <h3 class="experience-title">AI 헬스케어 초격차 캠프</h3>
+                                        <span class="institution-name">오즈코딩스쿨 (Oz Coding School)</span>
+                                    </div>
+                                    <div class="timeline-meta">
+                                        <span class="badge-role">수강생 / 분석가</span>
+                                        <span class="badge-period"><i class="fa-regular fa-calendar"></i> 2026</span>
+                                    </div>
+                                </div>
+
+                                <p class="experience-summary">
+                                    의료 데이터를 활용한 엔드투엔드 디지털 헬스케어 웹 서비스 개발 및 고급 머신러닝·딥러닝 모델링 집중 실습
+                                </p>
+
+                                <div class="project-tags-box">
+                                    <span class="p-tag"><i class="fa-solid fa-check"></i> 파이썬 & 통계 모델링</span>
+                                    <span class="p-tag"><i class="fa-solid fa-check"></i> 데이터베이스 구축 및 쿼리 최적화</span>
+                                    <span class="p-tag highlight"><i class="fa-solid fa-lungs"></i> X-ray 폐렴 영상 분류 AI</span>
+                                    <span class="p-tag highlight"><i class="fa-solid fa-baby"></i> 난임 예측 데이터 분석</span>
+                                    <span class="p-tag"><i class="fa-solid fa-check"></i> 의료 웹 서비스 프로토타이핑</span>
+                                </div>
+
+                                <ul class="experience-bullets">
+                                    <li>의료 데이터를 활용한 실전 웹 서비스 개발 전과정(파이프라인 설계, 전처리, 모델링, 웹 배포) 이수</li>
+                                    <li>파이썬 및 통계학 기반 가설 검정, 머신러닝/딥러닝 알고리즘을 통한 헬스케어 데이터 예측 모델 개발</li>
+                                    <li>난임 예측 및 흉부 X-ray 폐렴 이미지 분류 등 실제 의료 도메인 데이터셋 심층 분석 및 인사이트 도출</li>
+                                    <li>다수의 애자일 기반 팀 프로젝트 수행으로 기획자-개발자 간 원활한 크로스 펑셔널 협업 역량 증명</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <!-- Certifications -->
-            <section id="certifications" class="mt-4">
-                <h2>Certifications</h2>
-                <div class="table-responsive">
-                    <table class="table table-bordered table-hover align-middle mb-0">
-                        <thead class="table-primary">
-                            <tr>
-                                <th>취득일</th>
-                                <th>자격증명</th>
-                                <th>발행처</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>2026.07</td>
-                                <td>전문보험심사청구사</td>
-                                <td>한국보험청구심사협회</td>
-                            </tr>
-                            <tr>
-                                <td>2026.06</td>
-                                <td>보험심사평가사 2급</td>
-                                <td>한국의료행정실무협의회</td>
-                            </tr>
-                            <tr>
-                                <td>2026.05</td>
-                                <td>건강보험심사청구사 1급</td>
-                                <td>한국자격검정평가진흥원</td>
-                            </tr>
-                            <tr>
-                                <td>2026.05</td>
-                                <td>파이썬전문가 1급</td>
-                                <td>한국자격검정평가진흥원</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <!-- 5. Certifications Card -->
+            <section id="certifications" class="dashboard-card section-card">
+                <div class="card-header-custom">
+                    <div class="header-title-box">
+                        <span class="header-icon"><i class="fa-solid fa-stamp"></i></span>
+                        <div>
+                            <h2>Certifications & Licenses</h2>
+                            <p class="section-sub">의료 심사 청구 및 데이터 분석 전문 공인 자격</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body-custom">
+                    <div class="row g-3 cert-grid">
+                        
+                        <div class="col-md-6">
+                            <div class="cert-item-card">
+                                <div class="cert-icon-box medical">
+                                    <i class="fa-solid fa-file-medical"></i>
+                                </div>
+                                <div class="cert-content">
+                                    <div class="cert-date"><i class="fa-regular fa-calendar-check"></i> 2026.07</div>
+                                    <h4 class="cert-name">전문보험심사청구사</h4>
+                                    <div class="cert-issuer">한국보험청구심사협회</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="cert-item-card">
+                                <div class="cert-icon-box medical">
+                                    <i class="fa-solid fa-hospital"></i>
+                                </div>
+                                <div class="cert-content">
+                                    <div class="cert-date"><i class="fa-regular fa-calendar-check"></i> 2026.06</div>
+                                    <h4 class="cert-name">보험심사평가사 2급</h4>
+                                    <div class="cert-issuer">한국의료행정실무협의회</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="cert-item-card">
+                                <div class="cert-icon-box medical">
+                                    <i class="fa-solid fa-clipboard-check"></i>
+                                </div>
+                                <div class="cert-content">
+                                    <div class="cert-date"><i class="fa-regular fa-calendar-check"></i> 2026.05</div>
+                                    <h4 class="cert-name">건강보험심사청구사 1급</h4>
+                                    <div class="cert-issuer">한국자격검정평가진흥원</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="cert-item-card">
+                                <div class="cert-icon-box tech">
+                                    <i class="fa-brands fa-python"></i>
+                                </div>
+                                <div class="cert-content">
+                                    <div class="cert-date"><i class="fa-regular fa-calendar-check"></i> 2026.05</div>
+                                    <h4 class="cert-name">파이썬전문가 1급</h4>
+                                    <div class="cert-issuer">한국자격검정평가진흥원</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </section>
 
-            <!-- 자기소개서 메일 발송 폼 -->
-            <section id="mail-form" class="mt-4 mb-3">
-                <h2>자기소개서 메일 발송 폼</h2>
-                <div class="mail-form">
-                    <form action="#" method="POST">
-                        <div class="mb-3">
-                            <label for="sender-email" class="form-label">보내는 사람 이메일:</label>
-                            <input type="email" class="form-control" id="sender-email" name="sender-email" placeholder="이메일을 입력하세요" required>
+            <!-- 6. Education Card -->
+            <section id="education" class="dashboard-card section-card">
+                <div class="card-header-custom">
+                    <div class="header-title-box">
+                        <span class="header-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                        <div>
+                            <h2>Education</h2>
+                            <p class="section-sub">보건의료, AI 마케팅, 인문학을 아우르는 융합적 학문 배경</p>
                         </div>
-                        <div class="mb-3">
-                            <label for="mail-subject" class="form-label">메일 제목:</label>
-                            <input type="text" class="form-control" id="mail-subject" name="mail-subject" placeholder="제목을 입력하세요" required>
+                    </div>
+                </div>
+
+                <div class="card-body-custom">
+                    <div class="row g-3 edu-grid">
+                        
+                        <div class="col-md-6">
+                            <div class="edu-card">
+                                <div class="edu-top">
+                                    <span class="edu-period">2026.03 ~ 현재</span>
+                                    <span class="edu-status on-leave">휴학</span>
+                                </div>
+                                <h4 class="edu-school">서울사이버대학교</h4>
+                                <p class="edu-major"><i class="fa-solid fa-book-bookmark"></i> AI서비스마케팅학과</p>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="mail-content" class="form-label">메일 내용:</label>
-                            <textarea class="form-control" id="mail-content" name="mail-content" placeholder="하고 싶은 말을 적어주세요" rows="4" required></textarea>
+
+                        <div class="col-md-6">
+                            <div class="edu-card">
+                                <div class="edu-top">
+                                    <span class="edu-period">2025.03 ~ 현재</span>
+                                    <span class="edu-status on-leave">휴학</span>
+                                </div>
+                                <h4 class="edu-school">고려사이버대학교</h4>
+                                <p class="edu-major"><i class="fa-solid fa-heart-pulse"></i> 보건의료학과</p>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">메일 발송하기</button>
+
+                        <div class="col-md-6">
+                            <div class="edu-card">
+                                <div class="edu-top">
+                                    <span class="edu-period">1997.02 ~ 2004.08</span>
+                                    <span class="edu-status completed">수료</span>
+                                </div>
+                                <h4 class="edu-school">서울대학교 대학원</h4>
+                                <p class="edu-major"><i class="fa-solid fa-landmark"></i> 영문학전공 (석사과정)</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="edu-card">
+                                <div class="edu-top">
+                                    <span class="edu-period">1992.02 ~ 1996.08</span>
+                                    <span class="edu-status graduated">졸업</span>
+                                </div>
+                                <h4 class="edu-school">서울대학교(관악)</h4>
+                                <p class="edu-major"><i class="fa-solid fa-graduation-cap"></i> 영어영문학과</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Mail Contact Form Card -->
+            <section id="mail-form" class="dashboard-card section-card">
+                <div class="card-header-custom">
+                    <div class="header-title-box">
+                        <span class="header-icon"><i class="fa-solid fa-paper-plane"></i></span>
+                        <div>
+                            <h2>Get in Touch</h2>
+                            <p class="section-sub">프로젝트 협업, 채용 문의 및 의견을 언제든 환영합니다</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body-custom">
+                    <form class="contact-form-modern" action="#" method="POST">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-group-custom">
+                                    <label for="sender-email" class="form-label-custom">
+                                        <i class="fa-solid fa-envelope"></i> 보내는 사람 이메일
+                                    </label>
+                                    <input type="email" class="form-control-custom" id="sender-email" name="sender-email" placeholder="example@domain.com" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group-custom">
+                                    <label for="mail-subject" class="form-label-custom">
+                                        <i class="fa-solid fa-heading"></i> 메일 제목
+                                    </label>
+                                    <input type="text" class="form-control-custom" id="mail-subject" name="mail-subject" placeholder="프로젝트 제안 / 문의 사항" required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group-custom">
+                                    <label for="mail-content" class="form-label-custom">
+                                        <i class="fa-solid fa-comment-dots"></i> 메일 내용
+                                    </label>
+                                    <textarea class="form-control-custom" id="mail-content" name="mail-content" rows="4" placeholder="상세한 제안 또는 메시지를 자유롭게 남겨주세요." required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn-submit-modern">
+                                    <span>메일 발송하기</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </section>
 
-        </div>
-    </div>
+            <!-- 페이지 푸터 -->
+            <footer class="main-footer">
+                <p>Designed for AI Healthcare Portfolio &amp; Service Planning Showcase · 2026</p>
+            </footer>
 
-    <!-- Bootstrap JS -->
+        </div>
+    </main>
+
+    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- 사이드바 토글 스크립트 -->
+    <!-- 인터랙션 및 모바일 메뉴 스크립트 -->
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const sidebar = document.querySelector('.sidebar');
         const overlay = document.querySelector('.sidebar-overlay');
+        const navLinks = document.querySelectorAll('.sidebar-menu li a');
 
         function toggleSidebar() {
             sidebar.classList.toggle('active');
             overlay.classList.toggle('active');
         }
 
-        menuToggle.addEventListener('click', toggleSidebar);
-        overlay.addEventListener('click', toggleSidebar);
+        if (menuToggle) {
+            menuToggle.addEventListener('click', toggleSidebar);
+        }
+        if (overlay) {
+            overlay.addEventListener('click', toggleSidebar);
+        }
 
-        document.querySelectorAll('.sidebar-menu li a').forEach(link => {
+        navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth <= 1024) toggleSidebar();
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                if (window.innerWidth <= 1024) {
+                    toggleSidebar();
+                }
+            });
+        });
+
+        // 스크롤 시 현재 섹션 하이라이트
+        const sections = document.querySelectorAll('section');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
             });
         });
     </script>
